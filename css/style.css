@@ -1,0 +1,48 @@
+.loadingContainer {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    transform: rotateZ(+65deg);
+}
+
+.loadingBox {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    background-color: #33ff33;
+    border: 2px solid gray;
+    border-left-color: #ff0000;
+    border-radius: 50%;
+    animation: Loading infinite 2.5s linear;
+}
+
+.loadingContainer:hover {
+    box-shadow: 10px 2px 30px #000;
+}
+
+.loading {
+    animation: Color infinite 5s linear;
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - 1.7em);
+    left: calc(50% - 2em);
+    transform: rotateZ(-65deg);
+}
+
+@keyframes Loading {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes Color {
+    25% {
+        color: #ee3333;
+    }
+    50% {
+        color: #3333ee;
+    }
+    75% {
+        color: #ee00ee;
+    }
+}
